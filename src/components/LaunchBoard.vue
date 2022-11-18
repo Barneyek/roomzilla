@@ -53,7 +53,7 @@
       </div>
       <div class="w-2/12 px-2 flex justify-end items-center">
         <p
-          class="bg-[#f4f9fb] text-[#2586bc] font-bold py-1 px-2 text-[13px] rounded cursor-pointer"
+          class="bg-[#f4f9fb] text-[#2586bc] font-semibold py-1 px-2 text-[13px] rounded cursor-pointer"
         >
           {{ el.status.name }}
         </p>
