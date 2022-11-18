@@ -1,6 +1,6 @@
 <template>
   <main class="wrapper relative flex">
-    <div class="bg-[#2586bc] h-screen w-28"></div>
+    <div class="bg-[#2586bc] min-h-screen w-28"></div>
     <launch-board />
   </main>
 </template>

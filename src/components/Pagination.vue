@@ -1,12 +1,26 @@
 <template>
-  <div class="relative flex items-center justify-center">
+  <div class="relative flex items-center mt-6 mb-10">
     <div class="flex items-center">
       <div
-        class="h-8 w-8 bg-[#1f2139] rounded-full relative cursor-pointer after:content-['<'] after:text-xl after:text-white after:absolute after:left-[10px] after:top-1/2 after:translate-y-[-50%]"
+        class="w-6 relative cursor-pointer after:content-['<'] after:text-xl after:text-[#eaf3f9] after:absolute after:left-[10px] after:top-1/2 after:translate-y-[-50%]"
       />
-      <span class="mr-2 ml-2">{{ currentPage + 1 }} of {{ totalPages() }}</span>
+      <div class="flex gap-x-3 pl-2">
+        <p class="bg-[#2586bc] rounded text-white px-2 py-0.5 cursor-pointer">
+          {{ currentPage + 1 }}
+        </p>
+        <p
+          class="bg-[#f2f2f2] rounded text-[#2f3031] px-2 py-0.5 cursor-pointer"
+        >
+          {{ nextPage }}
+        </p>
+        <p
+          class="bg-transparent rounded text-[#2f3031] px-1 py-0.5 cursor-pointer"
+        >
+          {{ totalPages }}
+        </p>
+      </div>
       <div
-        class="h-8 w-8 bg-[#1f2139] rounded-full relative cursor-pointer after:content-['>'] after:text-xl after:text-white after:absolute after:left-[10px] after:top-1/2 after:translate-y-[-50%]"
+        class="w-6 relative cursor-pointer cursor-pointer after:content-['>'] after:text-xl after:text-[#2586bc] after:absolute after:left-[10px] after:top-1/2 after:translate-y-[-50%]"
       />
     </div>
   </div>
@@ -19,10 +33,12 @@ export default {
   setup() {
     const totalPages = ref(3);
     const currentPage = ref(0);
+    const nextPage = ref(2);
 
     return {
       totalPages,
       currentPage,
+      nextPage,
     };
   },
 };
